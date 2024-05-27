@@ -8,7 +8,6 @@ if (!isset($_SESSION['username'])) {
     exit();
 }
 ?>
-?>
 <?php
 if (isset($_GET['id'])) {
     // Dapatkan nilai 'id' dari parameter URL
