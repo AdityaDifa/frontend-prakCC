@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const expressPhp = require('express-php');
 
 const app = express();
 const port = process.env.PORT || 8080;
@@ -9,8 +10,8 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-// Mengizinkan akses ke authentication.php tanpa melakukan pengecekan
-app.use('/auth', express.static(path.join(__dirname, 'auth', 'authentication.php')));
+// Menangani semua permintaan PHP di dalam folder 'auth'
+app.use('/auth', expressPhp.cgi(path.join(__dirname, 'auth')));
 
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
