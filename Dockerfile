@@ -1,20 +1,14 @@
-# Menggunakan node image dari Docker Hub
-FROM node:18
+# Menggunakan image PHP dengan server Apache dari Docker Hub
+FROM php:apache
 
 # Menetapkan direktori kerja di dalam container
-WORKDIR /app
-
-# Menyalin package.json dan package-lock.json (jika ada)
-COPY package*.json ./
-
-# Menginstal dependensi npm
-RUN npm install
+WORKDIR /var/www/html
 
 # Menyalin seluruh kode sumber proyek
 COPY . .
 
-# Menetapkan port yang akan digunakan oleh aplikasi
-EXPOSE 8080
+# Menetapkan port yang akan digunakan oleh server Apache (biasanya port 80)
+EXPOSE 80
 
-# Perintah untuk menjalankan aplikasi saat container dijalankan
-CMD ["npm", "start"]
+# Perintah untuk menjalankan server Apache saat container dijalankan
+CMD ["apache2-foreground"]
