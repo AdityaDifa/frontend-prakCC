@@ -8,6 +8,9 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
+// Serve static files (opsional, jika kamu memiliki file-file statis di folder lain)
+app.use(express.static(path.join(__dirname, 'auth')));
+
 // Serve index.html on the root route
 app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, 'index.html'));
