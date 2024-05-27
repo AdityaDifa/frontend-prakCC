@@ -1,0 +1,75 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom right, #5AB2FF, #A0DEFF);
+    min-height: 100vh;
+    
+}
+.login-container{
+    width: 25%;
+    height: 65%;
+    background: linear-gradient(to bottom right, #5AB2FF, #CAF4FF);
+    padding: 20px 10px;
+    min-width: 55vh;
+    min-height: 65vh;
+}
+.content-login{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    flex-direction: column;
+}
+.form-field{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 10px 0;
+}
+.border{
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+}
+
+.button-13 {
+  background-color: #fff;
+  border: 1px solid #c5c5c5;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Amazon Ember",sans-serif;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.button-13:hover {
+  background-color: #ececec;
+}
+
+.button-13:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+.input-1{
+    border:1px solid #0f1111;
+    border-radius: 5px;
+    height: 20px;
+}
