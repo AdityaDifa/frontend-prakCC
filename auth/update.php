@@ -1,4 +1,14 @@
 <?php
+session_start();
+// Mulai session
+// Periksa apakah pengguna sudah login, jika belum, arahkan ke halaman login
+if (!isset($_SESSION['username'])) {
+    header("Location: /frotnend-TugasAkhir/index.html");
+
+    exit();
+}
+?>
+<?php
 if (isset($_POST['id'], $_POST['title'], $_POST['author'], $_POST['jumlah'])) {
     // Dapatkan nilai 'id', 'title', 'author', dan 'jumlah'
     $id = $_POST['id'];

@@ -1,3 +1,13 @@
+<?php
+session_start();
+// Mulai session
+// Periksa apakah pengguna sudah login, jika belum, arahkan ke halaman login
+if (!isset($_SESSION['username'])) {
+    header("Location: /frotnend-TugasAkhir/index.html");
+
+    exit();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +25,7 @@
                 <p style="font-weight: bolder;font-size: 19px;">Gudang Buku</p>
             </div>
             <div>
-                <a href="#"><button class="button-13">Logout</button></a>
+                <a href="logout.php"><button class="button-13">Logout</button></a>
             </div>
         </nav>
     </header>

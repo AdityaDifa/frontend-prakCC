@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($authenticated) {
         $_SESSION['username'] = $username;
-        header("Location: table-page.php");
+        header("Location: tabel-page.php");
         exit();
     } else {
         echo "Username atau password salah!";
