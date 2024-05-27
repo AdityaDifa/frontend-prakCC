@@ -9,6 +9,6 @@ session_unset();
 session_destroy();
 
 // Redirect ke halaman login atau halaman lain yang sesuai
-header("Location: /frotnend-TugasAkhir/index.html");
+header("Location: ../index.html");;
 exit();
 ?>

@@ -3,7 +3,7 @@ session_start();
 // Mulai session
 // Periksa apakah pengguna sudah login, jika belum, arahkan ke halaman login
 if (!isset($_SESSION['username'])) {
-    header("Location: /frotnend-TugasAkhir/index.html");
+    header("Location: /index.html");
 
     exit();
 }
