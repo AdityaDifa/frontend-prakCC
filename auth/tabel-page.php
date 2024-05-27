@@ -53,18 +53,6 @@ if (!isset($_SESSION['username'])) {
                     <th colspan="2">Action</th>
                 </tr>
                 <?php
-                // Koneksi ke database
-                $servername = "34.101.160.191";
-                $username = "difa";
-                $password = "ambatukam";
-                $dbname = "gudangbuku";
-
-                try {
-                    // Buat koneksi PDO
-                    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-                    // set the PDO error mode to exception
-                    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
                     // Ambil data dari API
                     $url = "https://projek-api-tugas-prak-cc-rqransntba-et.a.run.app/books";
                     $json = file_get_contents($url);
@@ -81,9 +69,6 @@ if (!isset($_SESSION['username'])) {
                         echo "<td><a href='hapus.php?id=" . $row['id'] . "&title=" . $row['title'] . "&author=" . $row['author'] . "&jumlah=" . $row['jumlah'] . "'><button class='button-13'>hapus</button></a></td>";
                         echo "</tr>";
                     }
-                } catch (PDOException $e) {
-                    echo "Connection failed: " . $e->getMessage();
-                }
                 ?>
             </table>
         </div>
